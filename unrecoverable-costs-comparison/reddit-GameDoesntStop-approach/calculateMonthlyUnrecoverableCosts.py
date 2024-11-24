@@ -1,4 +1,13 @@
 
+# this is the approach suggested by reddit user GameDoesntStop. it includes the leveraged investment of the house
+# it does not include:
+# 1. interest payment: the percentage of the loan payment that is interest decreases each month (amortization schedule) 
+# 2. as the amount of house that is payed off increases, the opportunity cost of that money not being in s&p500 increases 
+# 3. the house can be rented to others if desired , this is similar to a dividend 
+# 4. monthly loan payments are greater than monthly rent payments. if buying a house causes a person to contribute less to their tax advantaged retirement accounts, then they incur an additional opportunity cost by missing out on this tax break 
+# 5. if your down payment is below 20%, you must pay mortgage insurance, ~1% of loan
+
+
 def convertToDollar(amount):
     return "${:,.2f}".format(amount)
 
@@ -36,3 +45,8 @@ print("Opportunity cost of S&P500 (" + str(S) + "%) is: " + convertToDollar(oppo
 print("Leveraged housing investment (" + str(R) + "%) is: " + convertToDollar(leveragedHousingInvestment))
 print("")
 print("Total monthly unrecoverable cost: " + convertToDollar(result))
+
+
+# thoughts: from playing around with this script, it seems that its pretty much always optimal to go with renting over buying, even dudring times 
+# of extreme interest rates. my intuitiont tells me that the variables not being accounted for (see top of this file) are throwing calculations off 
+# -> hence, I will switch to trying to look at the two investment options on a 30 year horizon. 
